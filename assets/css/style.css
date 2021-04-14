@@ -1,0 +1,383 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.content{
+	margin: 0 auto;
+	width: 85%;
+}
+
+.responsive{
+	display: none;
+}
+
+.browser{
+	display: block;
+}
+
+section#carrossel{
+	padding: 50px 0 50px 0;
+}
+
+section#carrossel .column{
+	width: 50%;
+}
+
+section#carrossel{
+	background-color: #434343;
+}
+
+section#carrossel input.set { 
+	display:none; 
+}
+
+section#carrossel #slides { 
+	margin: auto;
+    position: relative;
+}
+
+section#carrossel #slides img{ 
+	max-width: 80%;
+}
+
+section#carrossel .slide img{
+	border: 7px solid #707070;
+}
+
+section#carrossel .slide{
+	color: #fff;
+}
+
+section#carrossel .slide h2{
+	margin-top: 10px;
+}
+
+section#carrossel .slide .text{
+	margin-top: 10px;
+	max-width: 80%;
+}
+
+
+section#carrossel #slide1:checked ~ .mask .overflow { margin-left:0; }
+section#carrossel #slide2:checked ~ .mask .overflow { margin-left:-100%; }
+section#carrossel #slide3:checked ~ .mask .overflow { margin-left:-200%; }
+section#carrossel #slide4:checked ~ .mask .overflow { margin-left:-300%; }
+section#carrossel #slide5:checked ~ .mask .overflow { margin-left:-400%; }
+section#carrossel #slide6:checked ~ .mask .overflow { margin-left:-500%; }
+section#carrossel #slide7:checked ~ .mask .overflow { margin-left:-600%; }
+section#carrossel #slide8:checked ~ .mask .overflow { margin-left:-700%; }
+section#carrossel #slide9:checked ~ .mask .overflow { margin-left:-800%; }
+#slides .mask { 
+	width:85%;
+	overflow:hidden;
+	margin:auto;
+}
+
+#slides .overflow { 
+	width:300%;
+	-webkit-transition: ease-out 0.5s; 
+}
+
+#slides .slide { 
+	width: 33.33333333333%;
+	float:left; 
+
+}
+
+#controls label { 
+	display:none; 
+	width:60px; 
+	height:60px; 
+	position:absolute; 
+	top:50%; 
+	margin-top:-30px; 
+	cursor:pointer; 
+	z-index: 10;
+}
+
+#controls .arrow { 
+	display:none; 
+	width:60px; 
+	height:60px; 
+	position:absolute; 
+	top:50%; 
+	margin-top:-30px; 
+	cursor:pointer; 
+}
+
+#controls .arrow.right { 
+	right: 0;
+}
+
+#controls .arrow.right img, #controls .arrow.left img{ 
+	width:55px; 
+	z-index: 10;
+}
+
+#controls label:hover ~ .arrow img{ 
+	width:60px; 
+}
+
+
+#controls label:hover { 
+	opacity:1; 
+}
+
+#controls .arrow { 
+	display: none;
+}
+
+#slide1:checked ~ #controls label:nth-child(2), #slide2:checked ~ #controls label:nth-child(3), #slide3:checked ~ #controls label:nth-child(2) { 
+	right:0; display:block; 
+}
+
+#slide2:checked ~ #controls label:nth-child(1), #slide3:checked ~ #controls label:nth-child(2) { 
+	left:0; display:block; 
+}
+
+#slide3:checked ~ #controls label:nth-child(2) {
+  	transform: matrix(-1,0,0,1,0,0);
+}
+
+#slide1:checked ~ #controls .arrow.right { 
+	display:block; 
+
+}
+
+#slide1:checked ~ #controls .arrow.left,  { 
+	display:none; 
+}
+
+
+#slide2:checked ~ #controls .arrow.right { 
+	display:block; 
+
+}
+
+#slide2:checked ~ #controls .arrow.left{
+	display:block; 
+}
+
+#slide3:checked ~ #controls .arrow.right { 
+	display:none; 
+
+}
+
+#slide3:checked ~ #controls .arrow.left{
+	display:block; 
+}
+
+section#image_text{
+	background-color: #707070;
+}
+
+section#image_text .content{
+	margin: 0 auto;
+	width: 85%;
+	padding: 50px 0 50px 0;
+}
+
+section#image_text .content .box_image{
+	min-width: 30%;
+	background-image: url("../img/banners/banner-1.png");
+	min-height: 350px;
+	border: 8px solid #313131;
+	border-radius: 50%;
+	background-position: center; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
+  	background-size: cover;
+}
+
+section#image_text .content .box-text{
+	color: #fff;
+	width: 70%;
+	font-size: 14pt;
+	padding-left: 80px;
+
+}
+
+section#image_text .content .box-text p{
+	margin-top: 10px;
+
+}
+
+section#image_text .content h2{
+	margin-bottom: 31px;
+
+}
+
+section#image_text .content {
+   display: flex;
+   align-items:center;
+}
+
+section#accordion {
+	background-color: #bfbfbf;
+	padding: 50px 0 50px 0;
+
+}
+
+section#accordion .accordion {
+  background-color: #707070;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-top: 5px;
+  color: #FFF;
+  font-size: 24pt;
+}
+
+
+
+section#accordion .active, section#accordion .accordion:hover {
+  background-color: #4e4c4c;
+}
+
+section#accordion .panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  padding-bottom: 20px;
+
+}
+
+section#accordion .panel-content {
+   display: flex;
+   align-items:center;
+}
+
+section#accordion .panel-content {
+   width: 100%;
+
+}
+
+section#accordion .panel .title{
+   	width: 100%;
+	font-size: 25pt;
+	color: #707070;
+    padding: 20px 0 20px;
+}
+
+section#accordion button .arrow-up{
+   	display: none;
+   	filter: brightness(0) invert(1);
+}
+
+
+section#accordion button img{
+   	float: right;
+    margin: 10px 20px;
+}
+
+section#accordion .panel-content img{
+    width: 25%;
+    border: 8px solid #707070;
+
+}
+
+section#accordion .panel-content .text{
+	font-size: 16pt;
+    padding-left: 20px;
+    color: #707070;
+}
+
+section#form {
+	padding: 50px 0 50px 0;
+	background: linear-gradient(to bottom right, #707070 0%, #707070 50%, #434343 50%, #434343 100%);
+
+}
+
+.input-group{
+	position:relative;
+	width:100%;
+	overflow:hidden;
+	margin-bottom: 20px;
+}
+
+.input-group input{
+	width: -webkit-fill-available;
+	position:relative;
+	height:45px;
+	border-radius:10px;
+	box-shadow:none;
+	border:1px solid #827e7e;
+	padding-left:110px;
+	background-color: #bfbfbf;
+}
+.input-group textarea{
+	width: -webkit-fill-available;
+	position:relative;
+	height:150px;
+	border-radius:10px;
+	box-shadow:none;
+	border:1px solid #827e7e;
+	padding-left:120px;
+	background-color: #bfbfbf;
+	padding-top: 14px;
+	font-size:16px;
+}
+.input-group.text input{
+	height:150px;
+}
+
+.input-group label{
+	position:absolute;
+	left:0;
+	height:48px;
+	padding:0px 0px 0px 20px;
+	line-height:48px;
+	font-size:18px;
+	top:0;
+	font-weight:100;
+}
+
+section#form .error{
+	color: red;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+    display: none;
+
+
+}
+
+section#form .column{
+	width: 47%;
+}
+
+section#form .button{
+	text-align: center;
+
+}
+
+section#form button{
+    border-radius: 6px;
+    height: 45px;
+    width: 120px;
+    font-size: 14px
+}
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
+section#footer{
+	padding: 20px 0 20px 0;
+	text-align: center;
+	background-color: #313131;
+	color: #fff;
+}
+
+
+
